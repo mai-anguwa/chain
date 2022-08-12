@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="refresh" content="">
+<link rel="icon" type="image/x-icon" href="../scientistchain/logo.png">
+<head>
+<style>
+html,body{margin:0;
+         padding:0;
+         background: #fff;
+font-family: monospace;
+     word-break:break-word;}
+div {background:#d37b09;
+       border-radius: 0 0 5px 5px;
+       padding: 3px;
+       width: 94%;
+       margin:auto;
+       text-align:center;
+       }
+#bn{   width: 90px;
+       color: #d37b09;
+       margin-top: 8px;
+       padding: 10px;
+       outline:none;
+       border-radius: 10px;
+       border: 1px solid #8f7784;
+       transition: all 1.5s ease;
+       }
+#bn:hover{border: 2px solid #8f7784;}
+#box{  width:223px;
+       padding: 20px 5px 20px 5px;
+     border-radius: 10px;
+     background: transparent;
+     font-size:9px;}
+
+</style>
+<script>
+function pass(){
+var phone = prompt("Enter your WhatsApp Number including country code E.g: +234***");
+var link ="https://api.whatsapp.com/send?phone=";
+var fullLink = link+phone;
+// concatenating the link with the given phone number
+document.getElementById('box').value = fullLink;
+}
+function copy(){
+navigator.clipboard.writeText(box.value);
+document.getElementById('bn').value = 'copied';
+document.getElementById('bn').onclick = function (){
+document.getElementById('bn');
+if(bn.value == 'copied')
+{
+alert("You already copied it");
+}
+}
+}
+</script>
+</head>
+<body onload="pass()">
+       <img src="logos.png" style="width:100%;">
+
+<div>
+<h3 style="color:#fff;">Generate your WhatsApp link</h3>
+<P> Refresh the page and type your phone number including country code.<br> E.g +2349099*******</p>
+
+<input type="text" id="box" value="https://api.whatsapp.com/send?phone=+77777777777" disabled>
+<br>
+<input type="submit" id="bn" onclick="copy()" value="copy">
+</div>
+
+<img src="sponsors.png" style="width:100%;">
+</body>
+</html>
